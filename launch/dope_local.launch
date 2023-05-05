@@ -1,0 +1,7 @@
+<launch>
+  <arg name="config" default="$(find dope)/config/config_pose_robotx.yaml" doc="Path to parameter config file"/>
+
+  <node name="dope_local" pkg="dope" type="dope_local.py" output="screen" clear_params="true">
+    <rosparam file="$(arg config)"/>
+  </node>
+</launch>
