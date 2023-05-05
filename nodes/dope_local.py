@@ -161,7 +161,7 @@ class DopeNode(object):
         for dataset in dataset_l:
           N = 0
         #   dirPath = r"/content/train/*/*.*.jpg"
-          dirPath = r"/home/julie/catkin_ws/src/dope/dataset/LIVALO_train/train/Scene1/24.main.jpg"
+          dirPath = r"/home/arg-dope/catkin_ws/src/dope/dataset/wamv_10m/train/Scene1/91.main.jpg"
           # dirPath = r"/content/dataset/virtual_object/virtual_object/images/" + dataset + "/*/*"
           dataset_path = glob.glob(dirPath)
           print("\nDataset total size:", len(dataset_path))
@@ -226,7 +226,7 @@ class DopeNode(object):
             # Store the image with results overlaid
             print("{}:[{}/{} ({:.0f}%)]".format(dataset, N_of_complete, len(dataset_path), 100. * N_of_complete / len(dataset_path)))
             # cv2.imwrite("/content/predict_img/{}_prediction_{}.png".format(dataset, N), np.array(im))
-            cv2.imwrite("/home/julie/catkin_ws/src/dope/test/24.main.jpg", np.array(im))
+            cv2.imwrite("/home/arg-dope/catkin_ws/src/dope/test/91.main.jpg", np.array(im))
             N += 1
             
         print("Predict Finished")

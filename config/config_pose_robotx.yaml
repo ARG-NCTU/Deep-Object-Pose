@@ -12,7 +12,7 @@ weights: {
     # "mustard":"package://dope/weights/mustard_60.pth",
     #"soup":"package://dope/weights/soup_60.pth",
     # "sugar":"package://dope/weights/sugar_60.pth",
-    "LIVALO": "package://dope/weights/net_LIVALO_85.pth",
+    "wamv_10m": "package://dope/weights/net_wamv_10m_30.pth",
     # "bleach":"package://dope/weights/bleach_28_dr.pth"
     # Demo 
     # "Small_Cup":"package://dope/weights/net_medical_cup_95.pth",
@@ -53,7 +53,7 @@ weights: {
 dimensions: {
     # "Small_Cup" :[4.95, 4.93, 4.95],
     # "Water_Cup": [7.95, 9.93, 7.95],
-    "LIVALO": [7.95, 9.93, 7.95],
+    "wamv_10m": [7.95, 9.93, 7.95],
 
     # "cracker": [16.403600692749023,21.343700408935547,7.179999828338623],
     # "gelatin": [8.918299674987793, 7.311500072479248, 2.9983000755310059],
@@ -95,7 +95,7 @@ dimensions: {
 }
 
 class_ids: {
-    "LIVALO": 1,
+    "wamv_10m": 1,
     # "Small_Cup": 1,
     # "Water_Cup": 3,
     # "cracker": 1,
@@ -137,7 +137,7 @@ class_ids: {
 
 draw_colors: {
     # "Small_Cup": [13, 255, 128],
-    "LIVALO": [13, 255, 128],
+    "wamv_10m": [13, 255, 128],
     #  "Water_Cup": [13, 255, 128],
     # "GranolaBars" : [13, 255, 128],
     # "cracker": [13, 255, 128],  # green
@@ -173,7 +173,7 @@ meshes: {
 # optional: If the specified meshes are not in meters, provide a scale here (e.g. if the mesh is in centimeters, scale should be 0.01). default scale: 1.0.
 mesh_scales: {
     # "Small_Cup": 0.01,
-    "LIVALO": 0.01,
+    "wamv_10m": 0.01,
     # "GranolaBars": 0.01,
     # "Water_Cup": 0.01,
     # "cracker": 0.01,
