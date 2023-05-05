@@ -32,7 +32,7 @@ Dowload sample dataset from [NAS](http://gofile.me/773h8/Uxcbszrg1), which gener
 
 ### 3. Train
 ```
-    $ python3 scripts/train.py --data /home/arg/Deep-Object-Pose/dataset/LIVALO_train/ --workers 1 --batchsize 5 --namefile LIVALO --gpuids 0 --outf LIVALO --epochs 10
+    $ python3 scripts/train.py --data /home/arg-dope/Deep-Object-Pose/dataset/LIVALO_train/ --workers 1 --batchsize 5 --namefile LIVALO --gpuids 0 --outf LIVALO --epochs 10
 ```
 
 ## Simple example for training and inference about DOPE
