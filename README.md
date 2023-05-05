@@ -22,18 +22,46 @@ This is an algorithm repo and format to ros package let everyone can use it easi
 ```
 
 ## Usage
-### 1. Enter docker
+### Train 
+
+1. Dowload dataaset
+Dowload sample dataset from [NAS](http://gofile.me/773h8/Uxcbszrg1), which generated from this [repo](https://github.com/ARG-NCTU/robotx2022-unity-dataset) and unzip it and put it under Deep-Object-Pose/dataset/.
+
+2. Enter docker
 ```
     $ source docker_run.sh
 ```
 
-### 2. Dowload dataaset
-Dowload sample dataset from [NAS](http://gofile.me/773h8/Uxcbszrg1), which generated from this [repo](https://github.com/ARG-NCTU/robotx2022-unity-dataset) and unzip it and put it under Deep-Object-Pose/dataset/.
-
-### 3. Train
+3. Train
 ```
     $ python3 scripts/train.py --data /home/arg-dope/Deep-Object-Pose/dataset/LIVALO_train/ --workers 1 --batchsize 5 --namefile LIVALO --gpuids 0 --outf LIVALO --epochs 10
 ```
+
+### Test
+1. Create catkin_ws and Clone this repo
+```
+    $ mkdir -p ~/catkin_ws/src
+    $ cd ~/catkin_ws/src
+    $ git clone https://github.com/yimlaisum2014/Deep-Object-Pose.git dope
+    $ cd dope/
+```
+2. Dowload models and testing data datset 
+
+- Dowload models and testing dataset and put them under the catkin_ws/src/dope
+
+3. Enter Docker and make&source workspace
+```
+    $ source docker_run_4_inference.sh
+    $ cd /home/catkin_ws/
+    $ catkin_make
+    $ source devel/setup.bash
+```
+
+4. roslaunch dope dope.launch
+```
+    $ roslaunch dope dope_local.launch
+```
+
 
 ## Simple example for training and inference about DOPE
 
