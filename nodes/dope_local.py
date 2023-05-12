@@ -20,6 +20,11 @@ from PIL import ImageDraw
 from dope.inference.cuboid import Cuboid3d
 from dope.inference.cuboid_pnp_solver import CuboidPNPSolver
 from dope.inference.detector import ModelData, ObjectDetector
+import yaml 
+
+# load config
+with open('/home/arg-dope/catkin_ws/src/dope/nodes/config/path.yaml', 'r') as f:
+    config_path = yaml.load(f)
 
 class Draw(object):
     """Drawing helper class to visualize the neural network output"""
@@ -161,7 +166,8 @@ class DopeNode(object):
         for dataset in dataset_l:
           N = 0
         #   dirPath = r"/content/train/*/*.*.jpg"
-          dirPath = r"/home/arg-dope/catkin_ws/src/dope/dataset/wamv_10m/train/Scene1/91.main.jpg"
+          dirPath = config_path['input_path']
+        #   dirPath = '/home/arg-dope/catkin_ws/src/dope/dataset/wamv_10m/train/Scene1/91.main.jpg'
           # dirPath = r"/content/dataset/virtual_object/virtual_object/images/" + dataset + "/*/*"
           dataset_path = glob.glob(dirPath)
           print("\nDataset total size:", len(dataset_path))
@@ -226,7 +232,9 @@ class DopeNode(object):
             # Store the image with results overlaid
             print("{}:[{}/{} ({:.0f}%)]".format(dataset, N_of_complete, len(dataset_path), 100. * N_of_complete / len(dataset_path)))
             # cv2.imwrite("/content/predict_img/{}_prediction_{}.png".format(dataset, N), np.array(im))
-            cv2.imwrite("/home/arg-dope/catkin_ws/src/dope/test/91.main.jpg", np.array(im))
+            cv2.imwrite(config_path['output_path'], np.array(im))
+            # cv2.imwrite('/home/arg-dope/catkin_ws/src/dope/test/91.main.jpg', np.array(im))
+
             N += 1
             
         print("Predict Finished")

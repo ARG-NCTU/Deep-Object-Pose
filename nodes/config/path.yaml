@@ -1,0 +1,4 @@
+{
+  'input_path': '/home/arg-dope/catkin_ws/src/dope/dataset/drone_view_10m/Scene1/91.main.jpg',
+  'output_path': '/home/arg-dope/catkin_ws/src/dope/test/91.main.jpg'
+}

@@ -12,7 +12,7 @@ weights: {
     # "mustard":"package://dope/weights/mustard_60.pth",
     #"soup":"package://dope/weights/soup_60.pth",
     # "sugar":"package://dope/weights/sugar_60.pth",
-    "wamv_10m": "package://dope/weights/net_wamv_10m_30.pth",
+    "wamv_10m": "package://dope/weights/drone_wamv_10m.pth",
     # "bleach":"package://dope/weights/bleach_28_dr.pth"
     # Demo 
     # "Small_Cup":"package://dope/weights/net_medical_cup_95.pth",
