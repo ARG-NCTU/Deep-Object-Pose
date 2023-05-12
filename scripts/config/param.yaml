@@ -1,0 +1,9 @@
+{   
+    'data' : '/home/arg-dope/Deep-Object-Pose/dataset/drone_view_10m/', 
+    'workers' : 1 ,
+    'batchsize' : 5 ,
+    'namefile' : 'LIVALO' ,
+    'gpuids' : [0] ,
+    'outf' : 'LIVALO' ,
+    'epochs' : 10
+}
