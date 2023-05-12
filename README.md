@@ -31,12 +31,24 @@ Dowload sample dataset from [NAS](http://gofile.me/773h8/Uxcbszrg1), which gener
 ```
     $ source docker_run.sh
 ```
+3. Dowload Dataset
+Dwnload dataset with **download_dataset.sh**  and unzip it, put it under Deep-Object-Pose/dataset/.   
+Or you can use this [repo](https://github.com/ARG-NCTU/robotx2022-unity-dataset) to generate your own dataset.
+```
+   $ source download_dataset.sh 
+```
+<!-- Dowload sample dataset from [NAS](http://gofile.me/773h8/Uxcbszrg1), which generated from this [repo](https://github.com/ARG-NCTU/robotx2022-unity-dataset) and unzip it and put it under Deep-Object-Pose/dataset/. -->
 
-3. Train
+4. Train
+```
+$ python3 scripts/train.py --data /home/arg-dope/Deep-Object-Pose/dataset/LIVALO_train/ --workers 1 --batchsize 5 --namefile LIVALO --gpuids 0 --outf LIVALO --epochs 10
+```
+
+## Simple example for training and inference about DOPE
+<!-- 3. Train
 ```
     $ python3 scripts/train.py --data /home/arg-dope/Deep-Object-Pose/dataset/LIVALO_train/ --workers 1 --batchsize 5 --namefile LIVALO --gpuids 0 --outf LIVALO --epochs 10
-```
-
+``` -->
 ### Test
 1. Create catkin_ws and Clone this repo
 ```
@@ -47,8 +59,10 @@ Dowload sample dataset from [NAS](http://gofile.me/773h8/Uxcbszrg1), which gener
 ```
 2. Dowload models and testing data datset 
 
-- Dowload models and testing dataset and put them under the catkin_ws/src/dope
-
+- Download model to inference about DOPE with **download_model.sh** , and put it under catkin_ws/src/dope/weights/ .
+```
+    $ source download_model.sh
+```
 3. Enter Docker and make&source workspace
 ```
     $ source docker_run_4_inference.sh
