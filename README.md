@@ -70,20 +70,11 @@ $ python3 scripts/train_with_config.py
     $ catkin_make
     $ source devel/setup.bash
 ```
-
 4. roslaunch dope dope.launch
+- Give weights and other info in **config/config_pose_robotx.yaml**  
+- Also decide InputPath, OutputPath in **nodes/config/path.yaml**  
 ```
     $ roslaunch dope dope_local.launch
-```
-### Inference
-Download model to inference about DOPE with **download_model.sh** , and put it under Deep-Object-Pose/weights/ .
-```
-    $ source download_model.sh
-```
-Give weights and other info in **config/config_pose_robotx.yaml**
-Also decide InputPath, OutputPath in **nodes/config/path.yaml**
-```
-   $ roslaunch dope dope_local.launch
 ```
 
 ## Simple example for training and inference about DOPE
