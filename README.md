@@ -41,7 +41,7 @@ Or you can use this [repo](https://github.com/ARG-NCTU/robotx2022-unity-dataset)
 
 4. Train
 ```
-$ python3 scripts/train.py --data /home/arg-dope/Deep-Object-Pose/dataset/LIVALO_train/ --workers 1 --batchsize 5 --namefile LIVALO --gpuids 0 --outf LIVALO --epochs 10
+$ python3 scripts/train_with_config.py 
 ```
 
 ## Simple example for training and inference about DOPE
@@ -75,7 +75,16 @@ $ python3 scripts/train.py --data /home/arg-dope/Deep-Object-Pose/dataset/LIVALO
 ```
     $ roslaunch dope dope_local.launch
 ```
-
+### Inference
+Download model to inference about DOPE with **download_model.sh** , and put it under Deep-Object-Pose/weights/ .
+```
+    $ source download_model.sh
+```
+Give weights and other info in **config/config_pose_robotx.yaml**
+Also decide InputPath, OutputPath in **nodes/config/path.yaml**
+```
+   $ roslaunch dope dope_local.launch
+```
 
 ## Simple example for training and inference about DOPE
 
