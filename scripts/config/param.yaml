@@ -1,9 +1,9 @@
 {   
-    'data' : '/home/arg-dope/Deep-Object-Pose/dataset/drone_view_10m/', 
+    'data' : '/home/arg-dope/Deep-Object-Pose/dataset/wamv_10m', 
     'workers' : 1 ,
     'batchsize' : 5 ,
-    'namefile' : 'LIVALO' ,
+    'namefile' : 'wamv_10m' ,
     'gpuids' : [0] ,
-    'outf' : 'LIVALO' ,
+    'outf' : 'wamv_10m' ,
     'epochs' : 10
 }
